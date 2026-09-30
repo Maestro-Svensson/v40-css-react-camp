@@ -1,10 +1,11 @@
 import { useState } from "react";
+import "./App.css"
 
 function App() {
   const [todos, setTodos] = useState([
-    { id: 1, text: "Köp kaffe", done: false },
-    { id: 2, text: "Öppna campet", done: true },
-    { id: 3, text: "Pusha till GitHub", done: false },
+    { id: 1, text: "Köp kaffe", done: true },
+    { id: 2, text: "Städa kök", done: false },
+    { id: 3, text: "Dammtorka", done: false },
   ]);
   const [text, setText] = useState("");
 
