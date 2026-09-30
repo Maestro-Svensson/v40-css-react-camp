@@ -4,8 +4,9 @@ import "./App.css"
 function App() {
   const [todos, setTodos] = useState([
     { id: 1, text: "Köp kaffe", done: true },
-    { id: 2, text: "Städa kök", done: false },
-    { id: 3, text: "Dammtorka", done: false },
+    { id: 2, text: "Köp mjölk", done: true },
+    { id: 3, text: "Städa kök", done: false },
+    { id: 4, text: "Dammtorka", done: false },
   ]);
   const [text, setText] = useState("");
 
@@ -43,8 +44,10 @@ function App() {
       </form>
       <ul className="todo-list">
         {todos.map((t) => (
-          <li className="todo" 
-          key={t.id}>
+          <li
+               key={t.id}
+                className={t.done ? "todo completed" : "todo"}>
+
             <button type="button" onClick={() => toggleDone(t.id)}>
               {t.done ? "Avmarkera" : "Klar"}
             </button>{" "}
